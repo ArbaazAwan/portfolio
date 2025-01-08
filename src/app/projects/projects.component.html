@@ -1,0 +1,58 @@
+<!-- Updated Products Component -->
+<div class="row wrapper">
+  <div class="background"></div>
+  <div class="pulsate">
+    <div #elem class="parallax"></div>
+  </div>
+  <div #elem1 class="circle shadow" [style.top]="top" [style.left]="left"></div>
+
+  <!-- Side Navigation -->
+  <div class="sidenav">
+    <h2>Projects</h2>
+    <ul>
+      <li *ngFor="let project of projects" (click)="selectProject(project)" [class.active]="project === selectedProject">
+        <i class="fas fa-folder"></i> {{ project.name }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="content">
+    <div class="column-one">
+      <div *ngIf="selectedProject" class="project-details">
+        <div class="row">
+          <!-- Project Info -->
+          <div class="col-6">
+            <h3 class="project-name">{{ selectedProject.name }}</h3>
+            <p><i class="fas fa-calendar-alt heading-text"></i> <strong  class="heading-text">Duration</strong> {{ selectedProject.duration }}</p>
+            <p class="heading-text"><i class="fas fa-code"></i> <strong>Technologies Used</strong></p>
+            <ul class="tech-list">
+              <li *ngFor="let tech of selectedProject.technologies">
+                <img [src]="tech.svg"> {{ tech.name }}
+              </li>
+            </ul>
+            <p><i class="fas fa-info-circle heading-text"></i> <strong  class="heading-text">Description</strong></p>
+            <p class="desc">{{ selectedProject.description }}</p>
+            <p class="heading-text"><i class="fas fa-tasks"></i> <strong>Responsibilities:</strong></p>
+            <ul>
+              <li *ngFor="let responsibility of selectedProject.responsibilities">
+                <i class="fas fa-check-circle"></i> {{ responsibility }}
+              </li>
+            </ul>
+          </div>
+
+          <!-- Project Media -->
+          <div class="col-6">
+            <div class="slide-show-container">
+              <app-slide-show></app-slide-show>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column-two">
+      <!-- Additional content can go here -->
+    </div>
+  </div>
+</div>

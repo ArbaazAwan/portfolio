@@ -5,7 +5,7 @@
   animation: fade-out 5s infinite;
  ;
 } */
-/* 
+/*
 
 
 @keyframes grained {
@@ -16,6 +16,11 @@
     transform: rotate(360deg);
     }
 } */
+
+
+:root{
+  --primary-color: #4DA1A9;
+}
 
 /*  moving image css*/
 .background {
@@ -103,7 +108,7 @@ body {
   background-color: transparent;
   font-family: MyFont;
     font-size: 1rem;
-  
+
   line-height: 20px;
 }
 
@@ -144,7 +149,7 @@ body {
 
 @keyframes buttonTransition {
 
-  
+
   from {
       transform: scale(0.7);
   }
@@ -171,7 +176,7 @@ body {
 
 @keyframes textTransition {
 
-  
+
   from {
       transform: scale(0.97);
   }
@@ -192,7 +197,7 @@ body {
   fill: none;
   stroke: red;
   stroke-width: 3px;
-  
+
 }
 
 .ghostCircle.show {

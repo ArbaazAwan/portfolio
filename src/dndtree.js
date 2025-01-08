@@ -1,84 +1,51 @@
 function createTree() {
 
-
   treeJSON = d3.json('flare.json', function (treeData) {
-
-    console.log(treeData);
-
-    treeData =
-    {
-      "name": "interests",
+    treeData = {
+      "name": "expertises",
       "children": [
         {
-          "name": "programming",
+          "name": "front end",
           "children": [
-            {
-              "name": "front end",
-              "children": [
-                { "name": "angular" },
-                { "name": ".net core" },
-              ]
-            },
-            {
-              "name": "back end",
-              "children": [
-                { "name": "node" },
-                { "name": ".net core web APIs" },
-              ]
-            },
-            {
-              "name": "database",
-              "children": [
-                { "name": "postgre sql" },
-                { "name": "sql server" },
-                { "name": "dynamo db" },
-              ]
-            },
-            {
-              "name": "cloud",
-              "children": [
-                {
-                  "name": "AWS",
-                  "children": [
-                    { "name": "Serverless Application Model" }
-                  ]
-                },
-                { "name": "azure" },
-              ]
-            },
-            {
-              "name": "achievements",
-              "children": [
-                { "name": "AZ-900 Certified" },
-                { "name": "SCRUM Fundamentals Certified" },
-                { "name": "EoM Sep 2022" }
-              ]
-            },
+            { "name": "angular" },
+            { "name": ".net core" },
           ]
         },
         {
-          "name": "activities",
+          "name": "back end",
+          "children": [
+            { "name": "node" },
+            { "name": ".net core web APIs" },
+          ]
+        },
+        {
+          "name": "database",
+          "children": [
+            { "name": "postgre sql" },
+            { "name": "sql server" },
+            { "name": "dynamo db" },
+          ]
+        },
+        {
+          "name": "cloud",
           "children": [
             {
-              "name": "games",
+              "name": "AWS",
               "children": [
-                {
-                  "name": "age of empires"
-                },
-                {
-                  "name": "tekken"
-                }
+                { "name": "Serverless Application Model" }
               ]
             },
-            {
-              "name": "sports",
-              "children": [
-                { "name": "badminton" },
-                { "name": "cricket" }
-              ]
-            }
+            { "name": "azure" },
           ]
-        }
+        },
+        {
+          "name": "achievements",
+          "children": [
+            { "name": "AZ-900 Certified" },
+            { "name": "SCRUM Fundamentals Certified" },
+            { "name": "EoM Sep 2022" }
+          ]
+        },
       ]
     };
 
@@ -190,7 +157,6 @@ function createTree() {
 
     }
     function zoom() {
-
       svgGroup.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
     }
 
@@ -246,8 +212,6 @@ function createTree() {
       .attr("height", "100%")
       .attr("class", "overlay")
       .call(zoomListener);
-
-
 
     // Helper functions for collapsing and expanding nodes.
 
