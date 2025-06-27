@@ -22,7 +22,7 @@
       <div *ngIf="selectedProject" class="project-details">
         <div class="row">
           <!-- Project Info -->
-          <div class="col-6">
+          <div class="col-12">
             <h3 class="project-name">{{ selectedProject.name }}</h3>
             <p><i class="fas fa-calendar-alt heading-text"></i> <strong  class="heading-text">Duration</strong> {{ selectedProject.duration }}</p>
             <p class="heading-text"><i class="fas fa-code"></i> <strong>Technologies Used</strong></p>
@@ -42,11 +42,11 @@
           </div>
 
           <!-- Project Media -->
-          <div class="col-6">
+          <!-- <div class="col-6">
             <div class="slide-show-container">
               <app-slide-show></app-slide-show>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

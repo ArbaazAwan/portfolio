@@ -38,6 +38,7 @@ export enum TECHNOLOGIES_SVG {
   MaterialUI = '/assets/images/technologies/materialui.svg',
   AWS = '/assets/images/technologies/aws.svg',
   KenduUI = '/assets/images/technologies/kenduui.svg',
+  Auth0 = '/assets/images/technologies/auth0.svg',
   PrimeNG = 'https://i0.wp.com/www.primefaces.org/wp-content/uploads/2016/10/primeng.png?fit=250%2C250&ssl=1',
 }
 
@@ -61,8 +62,42 @@ export class ProjectsComponent implements OnInit {
 
   projects: Project[] = [
     {
+      name: 'TAMS (Tanker Access Management System)',
+      duration: 'June 2025 – Present',
+      technologies: [
+        { name: 'Angular 20', svg: TECHNOLOGIES_SVG.Angular },
+        { name: '.NET Core', svg: TECHNOLOGIES_SVG.DotNetCore },
+        { name: 'SQL Server', svg: TECHNOLOGIES_SVG.SQL },
+      ],
+      description:
+        'The project is for Ashgal (Qatar) for managing the access of tankers',
+      responsibilities: [
+        'Setup and configure the project from scratch',
+        'Implemented Front end using Angular 20',
+        'Configure and manage backend APIs using .NET Core',
+        'Debugging and Enhancements',
+      ],
+    },
+    {
+      name: 'API Market Place',
+      duration: 'December 2024 – June 2025',
+      technologies: [
+        { name: 'Angular 18', svg: TECHNOLOGIES_SVG.Angular },
+        { name: 'Okta Auth0', svg: TECHNOLOGIES_SVG.Auth0 },
+        { name: 'SQL Server', svg: TECHNOLOGIES_SVG.SQL },
+      ],
+      description:
+        'The project is for the API Market Place for Dev Portals and API Management',
+      responsibilities: [
+        'Setup and configure the API Market Place from scratch',
+        'Implemented Okta Auth0',
+        'Implemented dynamic form builders for each processes of each use case',
+        'Debugging and Enhancements',
+      ],
+    },
+    {
       name: 'Vodacom (DRC)',
-      duration: 'May 2024 – present',
+      duration: 'May 2024 – December 2024',
       technologies: [
         { name: 'Angular 14', svg: TECHNOLOGIES_SVG.Angular },
         { name: 'Java (back end)', svg: TECHNOLOGIES_SVG.Java },
@@ -116,43 +151,22 @@ export class ProjectsComponent implements OnInit {
       ],
     },
     {
-      name: 'CMS Oregon NY',
-      duration: 'November 2021 – March 2022',
-      // technologies: ['NET CORE 5 Web APIs', 'Angular 12', 'SQL Server', 'EF Core', 'Dapper (ORM)'],
+      name: 'Water Tronics, Sales Portal',
+      duration: 'June 2023 – September 2023',
       technologies: [
-        { name: 'Angular 14', svg: TECHNOLOGIES_SVG.Angular },
-        { name: 'SQL Server', svg: TECHNOLOGIES_SVG.SQL },
-        { name: '.NET Core Web APIs', svg: TECHNOLOGIES_SVG.DotNetCore },
-        { name: 'PrimeNG', svg: TECHNOLOGIES_SVG.PrimeNG },
-        { name: 'Material UI', svg: TECHNOLOGIES_SVG.MaterialUI },
-        { name: 'AWS Lambda', svg: TECHNOLOGIES_SVG.AWS },
-        { name: 'AWS API Gateway', svg: TECHNOLOGIES_SVG.AWS },
-        { name: 'AWS Cognito', svg: TECHNOLOGIES_SVG.AWS },
-        { name: 'AWS DynamoDB', svg: TECHNOLOGIES_SVG.AWS },
+        { name: 'Angular 12', svg: TECHNOLOGIES_SVG.Angular},
+        { name: 'PrimeNG', svg: TECHNOLOGIES_SVG.PrimeNG},
+        { name: 'Material UI', svg: TECHNOLOGIES_SVG.MaterialUI},
+        { name: '.NET Core 5 Web APIs', svg: TECHNOLOGIES_SVG.DotNetCore},
+        { name: 'SQL Server', svg: TECHNOLOGIES_SVG.SQL}
       ],
-      description:
-        "The HIV Care and Treatment Program is Oregon State's project.",
+      description: 'Pre Sales and Sales Portal.',
       responsibilities: [
-        'Case Management System (CMS) POCs and Wire Frames.',
-        'RESTful APIs for CMS Implementation.',
-        'Implementing Micro Front End (MFE) of CMS.',
-      ],
-    },
-    {
-      name: 'Veolia, Pricing Portal',
-      duration: 'August 2022 – April 2023',
-      technologies: [
-        { name: 'Angular', svg: TECHNOLOGIES_SVG.Angular },
-        { name: 'AWS SAM', svg: TECHNOLOGIES_SVG.AWS },
-        { name: 'NodeJS', svg: TECHNOLOGIES_SVG.Nodejs },
-        { name: 'PostgreSQL', svg: TECHNOLOGIES_SVG.PostgreSQL },
-      ],
-      description: 'Veolia is a water treatment',
-      responsibilities: [
-        'Gather Requirements from Veolia team (client).',
-        'Created application front-end wire frames using Angular 14.',
-        'Created NodeJS API endpoints in AWS.',
-        'Created Database (PostgreSQL).',
+        'Implementing new station rules and logics using rule engine.',
+        'Implemented Auto Pick of parts based on required station configurations.',
+        'Created sales quotation based on parts picked.',
+        'Debugging and solving errors.',
+        'Improving user experience.',
       ],
     },
     {
@@ -173,25 +187,44 @@ export class ProjectsComponent implements OnInit {
       ],
     },
     {
-      name: 'Water Tronics, Sales Portal',
-      duration: 'June 2023 – September 2023',
+      name: 'Veolia, Pricing Portal',
+      duration: 'August 2022 – April 2023',
       technologies: [
-        { name: 'Angular 12', svg: TECHNOLOGIES_SVG.Angular},
-        { name: 'PrimeNG', svg: TECHNOLOGIES_SVG.PrimeNG},
-        { name: 'Material UI', svg: TECHNOLOGIES_SVG.MaterialUI},
-        { name: '.NET Core 5 Web APIs', svg: TECHNOLOGIES_SVG.DotNetCore},
-        { name: 'SQL Server', svg: TECHNOLOGIES_SVG.SQL}
-
+        { name: 'Angular', svg: TECHNOLOGIES_SVG.Angular },
+        { name: 'AWS SAM', svg: TECHNOLOGIES_SVG.AWS },
+        { name: 'NodeJS', svg: TECHNOLOGIES_SVG.Nodejs },
+        { name: 'PostgreSQL', svg: TECHNOLOGIES_SVG.PostgreSQL },
       ],
-      description: 'Pre Sales and Sales Portal.',
+      description: 'Veolia is a water treatment',
       responsibilities: [
-        'Implementing new station rules and logics using rule engine.',
-        'Implemented Auto Pick of parts based on required station configurations.',
-        'Created sales quotation based on parts picked.',
-        'Debugging and solving errors.',
-        'Improving user experience.',
+        'Gather Requirements from Veolia team (client).',
+        'Created application front-end wire frames using Angular 14.',
+        'Created NodeJS API endpoints in AWS.',
+        'Created Database (PostgreSQL).',
       ],
     },
+    {
+      name: 'CMS Oregon NY',
+      duration: 'November 2021 – March 2022',
+      technologies: [
+        { name: 'Angular 14', svg: TECHNOLOGIES_SVG.Angular },
+        { name: 'SQL Server', svg: TECHNOLOGIES_SVG.SQL },
+        { name: '.NET Core Web APIs', svg: TECHNOLOGIES_SVG.DotNetCore },
+        { name: 'PrimeNG', svg: TECHNOLOGIES_SVG.PrimeNG },
+        { name: 'Material UI', svg: TECHNOLOGIES_SVG.MaterialUI },
+        { name: 'AWS Lambda', svg: TECHNOLOGIES_SVG.AWS },
+        { name: 'AWS API Gateway', svg: TECHNOLOGIES_SVG.AWS },
+        { name: 'AWS Cognito', svg: TECHNOLOGIES_SVG.AWS },
+        { name: 'AWS DynamoDB', svg: TECHNOLOGIES_SVG.AWS },
+      ],
+      description:
+        "The HIV Care and Treatment Program is Oregon State's project.",
+      responsibilities: [
+        'Case Management System (CMS) POCs and Wire Frames.',
+        'RESTful APIs for CMS Implementation.',
+        'Implementing Micro Front End (MFE) of CMS.',
+      ],
+    }
   ];
 
   selectedProject!: Project;
