@@ -15,9 +15,11 @@
 /* Hide the images by default */
 .mySlides {
   display: none;
-  img{
-    border-radius: 20px;
-  }
+}
+
+/* Image styles */
+.mySlides img {
+  border-radius: 20px;
 }
 
 /* Next & previous buttons */

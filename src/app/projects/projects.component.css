@@ -168,11 +168,9 @@ p {
   -webkit-animation: animated_text 3s ease-in-out infinite;
 }
 
-.tech-list{
-  img{
-    width: 20px;
-    height: auto;
-  }
+.tech-list img {
+  width: 20px;
+  height: auto;
 }
 
 @keyframes animated_text {
